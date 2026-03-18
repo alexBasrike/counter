@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+
+
+.counterWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    height: 100vh;
+}

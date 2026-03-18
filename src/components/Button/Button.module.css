@@ -1,0 +1,22 @@
+.buttonPrimary {
+    background-color: rebeccapurple;
+    margin: 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    transition: background 0.4s, color 0.4s;
+    line-height: 22px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        background-color: white;
+        color: rebeccapurple;
+    }
+
+    &:disabled {
+        opacity: 0.4;
+        pointer-events: none;
+    }
+}

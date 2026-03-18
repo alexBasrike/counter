@@ -1,0 +1,39 @@
+.counterSettings {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid rebeccapurple;
+    border-radius: 20px;
+}
+
+.counterSettingsParams {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    padding: 20px;
+    border: 2px solid rebeccapurple;
+    border-radius: 15px;
+
+    p {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
+
+    input[type="number"] {
+        width: 100px;
+        text-align: center;
+    }
+}
+
+.counterSettingsButton {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid rebeccapurple;
+    border-radius: 15px;
+}

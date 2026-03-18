@@ -1,0 +1,38 @@
+.counterBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid rebeccapurple;
+    border-radius: 20px;
+}
+
+.counterValue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+    border: 2px solid rebeccapurple;
+    border-radius: 10px;
+    line-height: 50px;
+    font-size: 40px;
+    color: white;
+}
+
+.counterValueReachedMax {
+    color: red;
+}
+
+.counterButtons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid rebeccapurple;
+    border-radius: 15px;
+
+    button {
+        flex: 1;
+    }
+}
