@@ -17,10 +17,12 @@ function App() {
 
         if (maxValueFromLocalStorage) {
             setSettingsMaxValue(maxValueFromLocalStorage);
+            setCounterMaxValue(maxValueFromLocalStorage);
         }
 
         if (minValueFromLocalStorage) {
             setSettingsMinValue(minValueFromLocalStorage);
+            setCounterMinValue(minValueFromLocalStorage);
         }
     }, []);
 
