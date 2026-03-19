@@ -44,6 +44,12 @@ function App() {
         setCounterMinValue(settingsMinValue);
     }
 
+    const isValuesCorrect = settingsMaxValue >= 1
+        && settingsMinValue >= 0
+        && settingsMaxValue !== settingsMinValue
+        && settingsMaxValue > settingsMinValue
+    ;
+
     const isSetButtonDisabled = settingsMaxValue !== counterMaxValue || settingsMinValue !== counterMinValue;
 
     return (
@@ -54,10 +60,16 @@ function App() {
                     COUNTER_MIN_VALUE={settingsMinValue}
                     SET_MAX_VALUE={setNewSettingsMaxValue}
                     SET_MIN_VALUE={setNewSettingsMinValue}
+                    IS_VALUES_CORRECT={isValuesCorrect}
                     SET_BTN_DISABLED={isSetButtonDisabled}
-                    setNewValues={setNewValues}
+                    SET_NEW_VALUES={setNewValues}
                 />
-                <CounterBlock COUNTER_MAX_VALUE={counterMaxValue} COUNTER_MIN_VALUE={counterMinValue}/>
+                <CounterBlock
+                    COUNTER_MAX_VALUE={counterMaxValue}
+                    COUNTER_MIN_VALUE={counterMinValue}
+                    IS_VALUES_CORRECT={isValuesCorrect}
+                    SET_BTN_DISABLED={isSetButtonDisabled}
+                />
             </div>
         </>
     )

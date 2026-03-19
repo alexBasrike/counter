@@ -7,8 +7,9 @@ type CounterSettingsProps = {
     COUNTER_MIN_VALUE: number
     SET_MAX_VALUE: (counterMaxValue: number) => void
     SET_MIN_VALUE: (counterMinValue: number) => void
+    IS_VALUES_CORRECT: boolean
     SET_BTN_DISABLED: boolean
-    setNewValues: () => void
+    SET_NEW_VALUES: () => void
 }
 
 export const CounterSettings = ({
@@ -16,8 +17,9 @@ export const CounterSettings = ({
                                     COUNTER_MIN_VALUE,
                                     SET_MAX_VALUE,
                                     SET_MIN_VALUE,
+                                    IS_VALUES_CORRECT,
                                     SET_BTN_DISABLED,
-                                    setNewValues
+                                    SET_NEW_VALUES
                                 }: CounterSettingsProps) => {
 
     const onChangeMaxValueHandler = (e: ChangeEvent<HTMLInputElement, HTMLInputElement>) => {
@@ -43,7 +45,7 @@ export const CounterSettings = ({
             </div>
 
             <div className={css.counterSettingsButton}>
-                <Button callBack={setNewValues} disabled={!SET_BTN_DISABLED}>set</Button>
+                <Button callBack={SET_NEW_VALUES} disabled={!SET_BTN_DISABLED || !IS_VALUES_CORRECT}>set</Button>
             </div>
 
         </div>
